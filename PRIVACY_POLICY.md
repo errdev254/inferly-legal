@@ -1,6 +1,6 @@
 # Inferly Privacy Policy
 
-Last updated: March 5, 2026
+Last updated: March 6, 2026
 
 This Privacy Policy explains how Inferly (the "App") collects, uses, stores, and deletes data when used on Reddit.
 
@@ -19,7 +19,7 @@ Inferly stores the minimum data needed to run the game, including:
   - Per-puzzle aggregate counters (for example, total plays and total solved count).
 - **User-generated content (UGC)**
   - Puzzle title, four clues, and the canonical answer submitted by a puzzle creator.
-  - Reports and moderation-related fields (for example, report counts, removal markers, and moderation audit entries).
+  - Reports and moderation-related fields (for example, report counts and limited moderation audit entries).
 
 Inferly does not require external account linking.
 
@@ -46,7 +46,11 @@ Inferly runs inside Reddit communities, and some actions create or interact with
 - **Community puzzles (UGC)** are represented by Reddit posts created through Inferly. UGC post titles include the puzzle title and the creator's username (for example, "`My Puzzle | by example_user`").
 - **Sharing results**: if you choose to share a solve result, Inferly creates a comment on the puzzle post with a short result summary and any optional note you enter.
 
-Content posted to Reddit is governed by Reddit's own rules and policies. Deleting your Inferly app data does not necessarily remove posts or comments already published on Reddit.
+Content posted to Reddit is governed by Reddit's own rules and policies.
+
+Inferly removes community puzzle posts that you delete through Inferly. Inferly also attempts to remove community puzzle posts you created before completing a Delete My Data request.
+
+Optional solve-result comments and any other Reddit content already posted remain on Reddit unless you remove them through Reddit.
 
 ## 5) Data sharing
 
@@ -61,10 +65,12 @@ Inferly shares information with Reddit as needed to operate, for example:
 
 Inferly provides user-accessible deletion controls for app-stored data:
 
-- **Delete My Data**: removes per-user app data stored in Devvit Redis (gameplay progress, leaderboard membership, per-user indexes, and limiter keys).
-- **Delete a puzzle you created**: removes that puzzle from Inferly archive surfaces and removes internal app linkage. The underlying Reddit post may still exist. If you want the post removed, use Reddit's native post deletion tools (when available) or contact the subreddit moderators.
+- **Delete My Data**: removes per-user app data stored in Devvit Redis (for example, gameplay progress, leaderboard membership, per-user indexes, and limiter keys). If you created community puzzles, Inferly removes the in-app puzzle records and attempts to delete those Reddit puzzle posts before the request finishes. If a required Reddit post deletion fails, Inferly returns an error so you can retry instead of claiming the deletion completed.
+- **Delete a puzzle you created**: removes that puzzle from Inferly archive surfaces, removes the related app-stored puzzle data, and deletes the associated Reddit puzzle post.
 
 Inferly also honors platform moderation events. For example, if a community puzzle post is removed in Mod Tools, it will no longer appear in Inferly community archives.
+
+Delete My Data does not delete optional solve-result comments you have already posted to Reddit. Those comments remain subject to Reddit's own deletion tools and policies.
 
 ## 7) Retention
 
@@ -76,8 +82,8 @@ Inferly uses a 30-day sliding retention window for app-stored per-user gameplay 
 
 Some data may be retained longer for the game to function or for safety and integrity:
 
-- **Aggregate counters** (for example, total plays/solves per puzzle) may be retained for analytics and game balance.
-- **Moderation audit entries** may be retained to provide a minimal trace of moderation and deletion actions.
+- **Aggregate counters** (for example, total plays/solves for active puzzles) may be retained for gameplay surfaces and ranking.
+- **Moderation audit entries** may be retained to provide a minimal trace of moderation actions. Inferly does not intentionally keep deleted creator identifiers inside delete-action audit rows.
 
 ## 8) Security
 

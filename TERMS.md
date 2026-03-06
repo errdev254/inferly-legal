@@ -1,6 +1,6 @@
 # Inferly Terms of Service
 
-Last updated: March 5, 2026
+Last updated: March 6, 2026
 
 These Terms of Service ("Terms") govern use of Inferly (the "App") on Reddit.
 By using Inferly, you agree to these Terms and applicable Reddit terms and policies.
@@ -30,17 +30,20 @@ If you create puzzles or submit other content through Inferly:
 - You are responsible for your content.
 - You represent that you have the rights to submit the content.
 - Your content must not violate Reddit rules, community rules, or applicable law.
+- Regular players may be limited to one community puzzle creation per 24-hour window. Moderators may have higher or exempt limits for moderation and testing purposes.
 
 UGC posts include the puzzle title and the creator's username in the post title (for example, "`My Puzzle | by example_user`").
 
 Depending on Devvit platform availability and app settings, some posts or comments created through Inferly may be submitted by the app account instead of your user account.
+
+If you delete your own puzzle through Inferly, Inferly removes the in-app puzzle record and deletes the associated Reddit puzzle post.
 
 ## 4) Moderation and enforcement
 
 Inferly integrates with Reddit moderation workflows.
 
 - Community puzzle posts can be reported, removed, or restricted using Reddit Mod Tools.
-- Inferly may hide or remove puzzles from in-app archive surfaces when the associated Reddit post is removed or when the creator deletes the puzzle through Inferly.
+- Inferly may remove puzzles from in-app archive surfaces when the associated Reddit post is removed, when moderators remove the post, or when the creator deletes the puzzle through Inferly.
 - Inferly may apply rate limits or other restrictions to prevent spam and abuse.
 
 ## 5) Availability and changes
