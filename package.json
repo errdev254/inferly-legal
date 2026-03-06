@@ -1,0 +1,17 @@
+{
+  "name": "inferly-legal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node tools/build-pages.mjs --mode=dev && vite",
+    "build": "node tools/build-pages.mjs --mode=prod && vite build",
+    "preview": "vite preview",
+    "test": "node --test test/markdown.test.mjs",
+    "verify": "node tools/verify-dist.mjs && node --test test/dist-smoke.test.mjs"
+  },
+  "devDependencies": {
+    "markdown-it": "^14.0.0",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0"
+  }
+}

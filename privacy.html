@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inferly Privacy Policy</title>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <main class="site">
+      <header class="topbar">
+        <h1 class="brand">Inferly Legal</h1>
+        <nav class="nav" aria-label="Legal pages">
+          <a class="btn btn-privacy is-active" href="./privacy.html">Privacy</a>
+          <a class="btn btn-terms" href="./terms.html">Terms</a>
+        </nav>
+      </header>
+      <article class="panel content">
+        <h1>Inferly Privacy Policy</h1>
+<p>Last updated: March 5, 2026</p>
+<p>This Privacy Policy explains how Inferly (the “App”) collects, uses, stores, and deletes data when used on Reddit.</p>
+<p>Inferly is a Reddit Devvit app. Inferly stores app data in Reddit’s Devvit infrastructure (Redis) and uses Reddit platform APIs to create and interact with Reddit content.</p>
+<h2>1) What data Inferly stores (and collects)</h2>
+<p>Inferly stores the minimum data needed to run the game, including:</p>
+<ul>
+<li><strong>Identifiers and linkage</strong>
+<ul>
+<li>Your Reddit user ID (a platform identifier like <code>t2_...</code>) for per-user gameplay state, deletion, and rate limiting.</li>
+<li>Your Reddit username for attribution on community puzzle posts and for in-app display where applicable.</li>
+<li>Subreddit name, post IDs, puzzle IDs, and timestamps needed to link puzzles to Reddit posts and power archives.</li>
+</ul>
+</li>
+<li><strong>Gameplay</strong>
+<ul>
+<li>Attempts, solved state, and related timestamps needed to run gameplay, show solved indicators, and compute leaderboards.</li>
+<li>Per-puzzle aggregate counters (for example, total plays and total solved count).</li>
+</ul>
+</li>
+<li><strong>User-generated content (UGC)</strong>
+<ul>
+<li>Puzzle title, four clues, and the canonical answer submitted by a puzzle creator.</li>
+<li>Reports and moderation-related fields (for example, report counts, removal markers, and moderation audit entries).</li>
+</ul>
+</li>
+</ul>
+<p>Inferly does not require external account linking.</p>
+<h2>2) Why Inferly uses this data</h2>
+<p>Inferly uses stored data to:</p>
+<ul>
+<li>Run puzzles and validate answers.</li>
+<li>Show archives, solved indicators, plays/solved counts, and leaderboards.</li>
+<li>Support community puzzle creation and reporting workflows.</li>
+<li>Enforce publish limits and rate limits to prevent spam and abuse.</li>
+<li>Maintain operational reliability (for example, reconciliation and cleanup tasks).</li>
+</ul>
+<h2>3) Where data is stored</h2>
+<ul>
+<li>Inferly stores app data in Reddit Devvit infrastructure (Redis).</li>
+<li>Inferly does not operate a separate external database for gameplay data.</li>
+</ul>
+<h2>4) What becomes public on Reddit</h2>
+<p>Inferly runs inside Reddit communities, and some actions create or interact with public Reddit content:</p>
+<ul>
+<li><strong>Daily puzzles</strong> are represented by Reddit posts created by the app.</li>
+<li><strong>Community puzzles (UGC)</strong> are represented by Reddit posts created through Inferly. UGC post titles include the puzzle title and the creator’s username (for example, “<code>My Puzzle | by example_user</code>”).</li>
+<li><strong>Sharing results</strong>: if you choose to share a solve result, Inferly creates a comment on the puzzle post with a short result summary and any optional note you enter.</li>
+</ul>
+<p>Content posted to Reddit is governed by Reddit’s own rules and policies. Deleting your Inferly app data does not necessarily remove posts or comments already published on Reddit.</p>
+<h2>5) Data sharing</h2>
+<p>Inferly does not sell personal data. Inferly does not send your app data to third-party analytics or advertising services.</p>
+<p>Inferly shares information with Reddit as needed to operate, for example:</p>
+<ul>
+<li>Creating posts and comments via Reddit APIs.</li>
+<li>Forwarding player reports of community puzzles to Reddit moderation queues (for moderators to review in Mod Tools).</li>
+</ul>
+<h2>6) User controls and deletion</h2>
+<p>Inferly provides user-accessible deletion controls for app-stored data:</p>
+<ul>
+<li><strong>Delete My Data</strong>: removes per-user app data stored in Devvit Redis (gameplay progress, leaderboard membership, per-user indexes, and limiter keys).</li>
+<li><strong>Delete a puzzle you created</strong>: removes that puzzle from Inferly archive surfaces and removes internal app linkage. The underlying Reddit post may still exist. If you want the post removed, use Reddit’s native post deletion tools (when available) or contact the subreddit moderators.</li>
+</ul>
+<p>Inferly also honors platform moderation events. For example, if a community puzzle post is removed in Mod Tools, it will no longer appear in Inferly community archives.</p>
+<h2>7) Retention</h2>
+<p>Inferly uses a 30-day sliding retention window for app-stored per-user gameplay identifiers in Devvit Redis.</p>
+<ul>
+<li>Player activity refreshes retention for active gameplay keys.</li>
+<li>If a player is inactive for 30 days, scheduled pruning deletes app-stored per-user gameplay keys and index references.</li>
+<li>User-initiated deletion requests are supported through the in-app Delete My Data flow.</li>
+</ul>
+<p>Some data may be retained longer for the game to function or for safety and integrity:</p>
+<ul>
+<li><strong>Aggregate counters</strong> (for example, total plays/solves per puzzle) may be retained for analytics and game balance.</li>
+<li><strong>Moderation audit entries</strong> may be retained to provide a minimal trace of moderation and deletion actions.</li>
+</ul>
+<h2>8) Security</h2>
+<p>Inferly uses platform-provided controls and follows least-privilege app permissions for required features.</p>
+<h2>9) Children</h2>
+<p>Inferly is not directed to children under the minimum age required by applicable law and Reddit policies.</p>
+<h2>10) Policy changes</h2>
+<p>This policy may be updated from time to time. The “Last updated” date will reflect the latest version.</p>
+<h2>11) Contact</h2>
+<p>For privacy questions about Inferly, contact the app developer through the associated Reddit developer profile or the support contact configured for the app listing.</p>
+
+      </article>
+    </main>
+  </body>
+</html>
