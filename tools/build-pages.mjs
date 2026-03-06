@@ -3,11 +3,10 @@ import path from "node:path";
 import { renderMarkdown } from "./markdown.mjs";
 
 const root = path.resolve(process.cwd());
-const inferlyRoot = path.resolve(root, "..", "inferly");
 const templatesDir = path.resolve(root, "templates");
 
-const privacySource = path.resolve(inferlyRoot, "PRIVACY_POLICY.md");
-const termsSource = path.resolve(inferlyRoot, "TERMS.md");
+const privacySource = path.resolve(root, "PRIVACY_POLICY.md");
+const termsSource = path.resolve(root, "TERMS.md");
 const privacyTemplate = path.resolve(templatesDir, "privacy.template.html");
 const termsTemplate = path.resolve(templatesDir, "terms.template.html");
 const privacyOut = path.resolve(root, "privacy.html");
